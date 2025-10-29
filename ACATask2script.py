@@ -34,4 +34,4 @@ for i, window_size in enumerate(lhs):
         #load balancer if running jobs in parallel. runs will crash if cpu usage gets too high.
         #while psutil.cpu_percent() > 70: time.sleep(30)
         #.run won't return until the program finishes. using .Popen returns immediately, meaning all runs execute in parallel (be mindful of your machine's resources though!). however, it has fewer features like capturing program output.
-        subprocess.run("python /homes/lp721/aca-gem5/simulate.py --window_size "+str(window_size)+" --branch-pred-size "+str(branch_pred_size)+" --name "+name, shell=True)
+        subprocess.run("python /homes/lp721/aca-gem5/simulate.py --window-size "+str(window_size)+" --branch-pred-size "+str(branch_pred_size)+" --name "+name, shell=True)
